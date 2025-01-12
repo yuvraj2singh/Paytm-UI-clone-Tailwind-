@@ -41,6 +41,19 @@ navelements.forEach((navele)=>{
     })
 })
 
+//Return ticket show/hide
+const selected_flight_type=document.querySelectorAll("input[name='one_way']");
+
+selected_flight_type.forEach((e)=>{
+    e.addEventListener("change",()=>{
+        if (e.value=="return"){
+            document.querySelector(".return_flight").classList.remove("hidden");
+        }
+        else{
+            document.querySelector(".return_flight").classList.add("hidden");
+        }
+    })
+})
 
 departure_date.min = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 return_date.min = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;

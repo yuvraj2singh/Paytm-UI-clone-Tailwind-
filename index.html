@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="icon" href="https://paytm.com/favicon.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="https://paytm.com/favicon.ico"/>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body >
     <!--Navbar-->
@@ -154,10 +153,10 @@
 
       <div class="border-gray-400 border border-solid mx-6 px-4 py-2 rounded-lg bg-white ">
         <label for="one_way" class="cursor-pointer">
-          <input  type="radio" name="one_way" id="one_way" checked> One Way
+          <input type="radio" name="one_way" value="one way" id="one_way" checked> One Way
         </label>
         <label for="round_trip" class="cursor-pointer">
-          <input class="ml-4" type="radio" name="one_way" id="round_trip"> Round Trip
+          <input class="ml-4" type="radio" name="one_way" value="return" id="round_trip"> Round Trip
         </label>
         <div class="flex mt-4 flex-wrap gap-10">
 
@@ -182,8 +181,8 @@
             <div class="mt-2">
               <input 
               class="outline-none border-b-2 border-gray-300 focus:border-blue-400 focus:text-xl transition-all duration-150" 
-              type="text" 
-              value="Delhi"
+              type="text"
+              value=""
             />
           </div>
           </div>
@@ -197,11 +196,11 @@
           </div>
 
           <!--Return Date-->
-          <div class="flex flex-col">
+          <div class="flex flex-col hidden return_flight">
             <span class="text-gray-400 text-xs">Return Date</span>
             <div class="mt-2">
               <input id="return_date" type="date" >
-          </div>
+            </div>
           </div>
 
           <!--Traveller & Cabin Class-->
